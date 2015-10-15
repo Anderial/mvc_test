@@ -1,0 +1,38 @@
+﻿@model MVC_test_task.Models.ListModel
+
+@{
+    ViewBag.Title = "Новый кандидат:";
+}
+<div class="border">
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        <div class="editor-label">
+            @Html.LabelFor(model => model.full_name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.full_name)
+            @Html.ValidationMessageFor(model => model.full_name)
+        </div>
+
+
+        @Html.LabelFor(model => model.mail, "Почта")
+        @Html.EditorFor(model => model.mail)
+
+        @Html.LabelFor(model => model.fone, "Телефон")
+        @Html.EditorFor(model => model.fone)
+
+        @Html.LabelFor(model => model.vacancy, "Должность")
+        @Html.EditorFor(model => model.vacancy)
+
+        @Html.LabelFor(model => model.experience, "Опыт работы")
+        @Html.EditorFor(model => model.experience)
+
+        @Html.LabelFor(model => model.professional_skills, "Профессиональные навыки:")
+        @Html.EditorFor(model => model.professional_skills)
+
+        @Html.LabelFor(model => model.personal_qualities, "Личные качества:")
+        @Html.EditorFor(model => model.personal_qualities)
+
+        <input type="submit" value="Добавить:"/>
+    }
+</div>

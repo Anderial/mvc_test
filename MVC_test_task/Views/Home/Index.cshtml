@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MVC_test_task.Models.ListModel>
+@{
+    ViewBag.Title = "List";
+}
+
+
+<div>
+    <h3>Список всех заявок</h3>
+    <table>
+        @foreach (MVC_test_task.Models.ListModel l in Model)
+        {
+            <tr>
+                <td><p>@l.applicationId</p></td><n>
+                <td><p>@l.full_name</p></td>
+                <td><p>@l.fone</p></td>
+                <td><p>, Почта:</p></td>
+                <td><p>@l.mail</p></td>
+                <td><p>, Претендует на должность:</p></td>
+                <td><p>@l.vacancy</p></td>
+                <td><p>, Опыт работы:</p></td>
+                <td><p>@l.experience</p></td>
+                <td><p>, Профессиональные навыки:</p></td>
+                <td><p>@l.professional_skills</p></td>
+                <td><p>, Личные качества:</p></td>
+                <td><p>@l.personal_qualities</p></td>
+            </tr>
+        }
+    </table>
+</div>
+<fieldset>
+</fieldset>
